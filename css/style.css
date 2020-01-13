@@ -271,6 +271,10 @@ nav { display: none; }
     text-align: center;
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+}
 
 
 
