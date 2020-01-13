@@ -209,7 +209,7 @@ h3 { font-size: var(--fs-h3) }
         display: flex;
         max-width: 1000px;
         margin-right: left;
-        
+
     }
     
     .service + .service {
@@ -217,6 +217,10 @@ h3 { font-size: var(--fs-h3) }
     }
 }
 
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 
 
