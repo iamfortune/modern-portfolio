@@ -165,6 +165,10 @@ h3 { font-size: var(--fs-h3) }
     opacity: 0.5;
 }
 
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
 @media (min-width: 800px) {
     .services, #services {
         display: flex;
