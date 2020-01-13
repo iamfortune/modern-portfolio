@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Custom Properties, update these for your own design */
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
@@ -34,7 +35,7 @@
     }
 }
 
-/* Styles */
+/* General styles */
 
 body {
     background: var(--clr-light);
@@ -123,7 +124,9 @@ h3 { font-size: var(--fs-h3) }
 
 /* header */
 
+nav { display: none; }
 
+/*  Intro section  */
 
 .intro {
     position: relative;
@@ -195,7 +198,7 @@ h3 { font-size: var(--fs-h3) }
     opacity: 0.25;
 }
 
-.service {
+.services {
     margin-bottom: 4em;
 }
 
@@ -208,8 +211,8 @@ h3 { font-size: var(--fs-h3) }
     .services {
         display: flex;
         max-width: 1000px;
-        margin-right: left;
-
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .service + .service {
@@ -217,25 +220,46 @@ h3 { font-size: var(--fs-h3) }
     }
 }
 
+
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
 }
 
 @media (min-width: 600px) {
     .about-me {
         display: grid;
         grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
     }
     
-    .section__title--about,
+    .section__title--about {
+        grid-area: title;
+    }
+    
     .section__subtitle--about {
-        grid-column: 1;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc (200px + 4em);
+        
     }
     
     .about-me__img {
-        grid-row: 1 / -1;
-        grid-column: 2;
+        grid-area: img;
+        position: relative;
+        z-index: 2;
     }
 }
 
