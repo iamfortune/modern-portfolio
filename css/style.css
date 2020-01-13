@@ -158,7 +158,20 @@ h3 { font-size: var(--fs-h3) }
 .section__title--services::after {
     content: '';
     display: block;
-    width: 25%;
+    width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.5;
+}
+
+@media (min-width: 800px) {
+    .services, #services {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .service + .service {
+        margin-left: 2em;
+    }
 }
