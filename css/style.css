@@ -247,6 +247,7 @@ nav {
         grid-area: title;
     }
     
+    /* made the about me to go under the image */
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
