@@ -160,7 +160,8 @@ nav {
         position: relative;
         z-index: 2;
     }    
-    
+ 
+    /* made the intro paragraph to go under the image */
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
