@@ -212,6 +212,7 @@ nav {
     margin: 0 auto;
 }
 
+/* media query for services section*/
 @media (min-width: 800px) {
     .services {
         display: flex;
