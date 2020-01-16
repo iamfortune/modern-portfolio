@@ -1,4 +1,4 @@
-/* StyleSheet can be reused and i welcome contributions to it */
+/* StyleSheet can be reused and i welcome contributions */
 
 *,
 *::before,
@@ -261,7 +261,8 @@ nav {
         padding-right: calc (200px + 4em);
         
     }
-    
+ 
+    /* keeping the about me image in a static position and responsive */
     .about-me__img {
         grid-area: img;
         position: relative;
@@ -300,6 +301,8 @@ nav {
     opacity 250ms linear;
 }
 
+
+/* keeping the items stable when focused on */
 .portfolio__item:focus {
     position: relative;
     z-index: 2;
