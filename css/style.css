@@ -321,6 +321,7 @@ nav {
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
+    font-size: var(--fs-h3);
 }
 .footer a { 
     color: inherit;
@@ -328,7 +329,6 @@ nav {
 }
 
 .footer__link {
-    font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
 }
 
