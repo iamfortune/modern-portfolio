@@ -349,6 +349,13 @@ nav {
     padding: 0;
 }
 
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
 
 
 
