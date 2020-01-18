@@ -179,10 +179,25 @@ header {
 }
 
 .hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before, 
+.hamburger::after {
     background: var(--clr-light);
     width: 2em;
     height: 3px;
-    border-radius: ;
+}
+
+.hamburger::before, 
+.hamburger::after {
+    content: '';
+    position: relative;
+    left: 0;
+    right: 0;
+    background: var(--clr-dark);
 }
 
 
