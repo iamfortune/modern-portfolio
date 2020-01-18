@@ -1,12 +1,10 @@
-/* StyleSheet can be reused and i welcome contributions */
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Custom Properties and styles */
+/* Custom Properties, update these for your own design */
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
@@ -123,6 +121,11 @@ h3 { font-size: var(--fs-h3) }
     margin-bottom: 1em;
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
 
 /* header */
 
@@ -130,11 +133,10 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-
 }
 
 .logo {
-    max-width: 110px;
+    max-width: 100px;
 }
 
 .nav {
@@ -146,12 +148,10 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-
-
-    transform: translateX(50%);
-    transition: transform 250ms cubic-bezier(.5, 0, 0.5, 1);
+    
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
-
 
 .nav__list {
     list-style: none;
@@ -162,10 +162,8 @@ header {
     align-items: center;
     margin: 0;
     padding: 0;
-    
 }
 
-/* for the nav links  */
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
@@ -173,9 +171,14 @@ header {
     text-decoration: none;
 }
 
-/* style for nav link hover */
 .nav__link:hover {
     color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: .25em;
+    background: transparent;
+    border: 0;
 }
 
 .hamburger {
@@ -184,21 +187,26 @@ header {
 }
 
 .hamburger,
-.hamburger::before, 
+.hamburger::before,
 .hamburger::after {
-    background: var(--clr-light);
+    background: var(--clr-dark);
     width: 2em;
     height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
 }
 
-.hamburger::before, 
+
+.hamburger::before,
 .hamburger::after {
     content: '';
-    position: relative;
+    position: absolute;
     left: 0;
     right: 0;
-    background: var(--clr-dark);
 }
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px;}
 
 
 /*  Intro section  */
@@ -233,8 +241,7 @@ header {
         position: relative;
         z-index: 2;
     }    
- 
-    /* made the intro paragraph to go under the image */
+    
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -283,7 +290,6 @@ header {
     margin: 0 auto;
 }
 
-/* media query for services section*/
 @media (min-width: 800px) {
     .services {
         display: flex;
@@ -297,7 +303,7 @@ header {
     }
 }
 
-/* About me */
+
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
@@ -322,19 +328,16 @@ header {
         grid-area: title;
     }
     
-    /* made the about me to go under the image */
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        left: -2em;
+        left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
-        padding-right: calc (200px + 4em);
-        
+        padding-right: calc(200px + 4em);
     }
- 
-    /* keeping the about me image in a static position and responsive */
+    
     .about-me__img {
         grid-area: img;
         position: relative;
@@ -342,21 +345,14 @@ header {
     }
 }
 
-/* My work */
+/* My Work */
 
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: center;
+    text-align: center;    
 }
 
-.section__subtitle--work {
-    color: var(--clr-accent);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
-}
-
-/* making the portfolio items to be set and responsive */
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -367,25 +363,23 @@ header {
     overflow: hidden;
 }
 
-/* to make the image hover too */
 .portfolio__img {
-    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-    opacity 250ms linear;
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
 }
 
-
-/* keeping the items stable when focused on */
 .portfolio__item:focus {
     position: relative;
     z-index: 2;
 }
 
-/* to make the img hover when clicked on */
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
-    opacity: .75;
+    opacity: .5;
 }
+
 
 /* footer */
 
@@ -395,7 +389,9 @@ header {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
+
 }
+
 .footer a { 
     color: inherit;
     text-decoration: none;
@@ -429,6 +425,3 @@ header {
 .social-list__link {
     padding: .5em;
 }
-
-
-
