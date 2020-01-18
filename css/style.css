@@ -37,6 +37,11 @@
 
 /* General styles */
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -194,7 +199,7 @@ header {
     position: fixed;
 }
 
-.nav-toggle .hamburger {
+.nav-open .hamburger {
     transform: rotate(.625turn);
 }
 
@@ -202,9 +207,14 @@ header {
     transform: rotate(90deg) translateX(-6px);
 }
 
-.nav-toggle .hamburger::after {
+.nav-open .hamburger::after {
     opacity: 0;
 }
+
+
+
+
+
 
 .hamburger {
     display: block;
@@ -214,7 +224,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -231,7 +241,7 @@ header {
 }
 
 .hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px;}
+.hamburger::after { bottom: 6px; }
 
 
 /*  Intro section  */
